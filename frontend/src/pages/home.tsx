@@ -1,5 +1,6 @@
 import IngestForm from "../components/IngestForm";
 import ChatBox from "../components/ChatBox";
+import FileUpload from "../components/FileUpload";
 
 
 export default function App() {
@@ -10,6 +11,10 @@ export default function App() {
 
         <div className="card">
           <IngestForm />
+        </div>
+
+        <div className="card">
+          <FileUpload />
         </div>
 
         <div className="card">

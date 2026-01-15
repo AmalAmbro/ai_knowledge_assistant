@@ -35,6 +35,8 @@ async def vector_store_error_handler(request: Request, exc: VectorStoreError):
 
 from api.ingest import router as ingest_router
 from api.chat import router as chat_router
+from api.upload import router as upload_router
 
 app.include_router(ingest_router)
 app.include_router(chat_router)
+app.include_router(upload_router)
