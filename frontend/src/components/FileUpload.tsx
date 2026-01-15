@@ -27,7 +27,7 @@ export default function FileUpload() {
   return (
     <div className="upload-box">
       <h2>Ingest Knowledge via File</h2>
-
+      <p>Upload a .pdf, .docx or .txt file with the knowledge you want to add to the system.</p>
       <input
         type="file"
         accept=".pdf, .docx, .txt"
