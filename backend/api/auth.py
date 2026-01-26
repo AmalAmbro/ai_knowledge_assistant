@@ -39,7 +39,7 @@ def signup(payload: UserCreate, db: Session = Depends(get_db)):
 
     return user
 
-@router.post("/login", response_model=UserResponse)
+@router.post("/login")
 def login(payload: UserLogin, db: Session = Depends(get_db)):
     password = payload.password
     email = payload.email
@@ -51,4 +51,4 @@ def login(payload: UserLogin, db: Session = Depends(get_db)):
     if not verify_password(password, db_user.hashed_password):
         return HTTPException(status_code=400, detail={'error': 'Invalid credentials'})
     
-    return db_user
+    return UserResponse.from_orm(db_user)

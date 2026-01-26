@@ -15,5 +15,5 @@ class UserLogin(BaseModel):
 class UserResponse(UserBase):
     id: int
 
-    class Confing:
-        from_attributes = True
+    class Config:
+        from_attributes=True
